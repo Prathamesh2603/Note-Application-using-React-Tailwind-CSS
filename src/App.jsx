@@ -16,6 +16,7 @@ function App() {
                 placeholder="Take a note..." 
                 id="note-details"
               />
+              <button className="bg-blue-950 text-white font-medium px-9 py-3 rounded-md cursor-pointer ml-auto mt-2">Add</button>
             </form>
         </div>
         <div></div>
