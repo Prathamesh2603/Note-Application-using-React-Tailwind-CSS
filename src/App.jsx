@@ -1,3 +1,5 @@
+import { NotebookText } from 'lucide-react';
+
 function App() {
   return (
     <>
@@ -19,7 +21,13 @@ function App() {
               <button className="bg-blue-950 shadow-md text-white font-medium px-9 py-3 rounded-md cursor-pointer ml-auto mt-2">Add</button>
             </form>
         </div>
-        <div></div>
+        <div>
+          <div className='flex items-center px-14 gap-2'>
+            <NotebookText color='#172554'/>
+            <h2 className='text-blue-950 font-medium text-2xl'>My Notes</h2>
+          </div>
+          <div></div>
+        </div>
       </div>
     </>
   )
