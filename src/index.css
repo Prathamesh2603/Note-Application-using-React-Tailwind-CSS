@@ -1,4 +1,4 @@
 @import "tailwindcss";
-#note-details::-webkit-scrollbar {
+#note-details, #list-container::-webkit-scrollbar {
     display: none;
 }
