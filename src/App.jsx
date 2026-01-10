@@ -3,16 +3,23 @@ import { useState } from 'react';
 
 function App() {
   const [inputVal, setInputVal] = useState("");
+  const [textAVal, setTextAVal] = useState("");
   
-  const hnndleChange = (e) => {
+  const handleChange = (e) => {
     setInputVal(e.target.value);
   }
-  
+
+  const handleChange2 = (e) => {
+    setTextAVal(e.target.value);
+
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     alert(inputVal);
     setInputVal("");
+    setTextAVal("");
   }
 
   return (
@@ -26,13 +33,15 @@ function App() {
                 type="text" 
                 placeholder="Title"
                 id="note-title"
-                onChange={hnndleChange}
+                onChange={handleChange}
                 value={inputVal}
               />
               <textarea 
                 className="text-blue-950 w-[99%] border-none outline-none resize-none px-1 py-1"
                 placeholder="Take a note..." 
                 id="note-details"
+                onChange={handleChange2}
+                value={textAVal}
               />
               <button className="bg-blue-950 shadow-md text-white font-medium px-9 py-3 rounded-md cursor-pointer ml-auto mt-2">Add</button>
             </form>
