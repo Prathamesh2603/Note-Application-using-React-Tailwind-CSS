@@ -49,7 +49,7 @@ function App() {
               }}
               value={textAVal}
             />
-            <button className="bg-blue-950 shadow-md text-white font-medium px-9 py-3 rounded-md cursor-pointer ml-auto mt-2">
+            <button className="bg-blue-950 active:scale-95 shadow-md text-white font-medium px-9 py-3 rounded-md cursor-pointer ml-auto mt-2">
               Add
             </button>
           </form>
@@ -65,7 +65,19 @@ function App() {
                   <div key={idx} className="bg-white h-[80%] w-68 rounded-md p-4 shadow-lg shrink-0">
                     <div className="flex justify-between items-center mb-2">
                       <p className="text-blue-950 font-semibold text-2xl">{elem.title}</p>
-                      <button><Trash2 color="#172554" /></button>
+                      <button 
+                        className='cursor-pointer border-none outline-none active:scale-95'
+                        onClick={() => {
+                          const copyTask = [...task];
+                          
+                          copyTask.splice(idx,1);
+
+                          setTask(copyTask);
+                          
+                        }}
+                      >
+                        <Trash2 color="#172554" />
+                      </button>
                     </div>
                     <div>
                       <p>{elem.note}</p>
