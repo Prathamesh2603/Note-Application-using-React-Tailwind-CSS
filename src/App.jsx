@@ -59,7 +59,7 @@ function App() {
             <NotebookText color="#172554" />
             <h2 className="text-blue-950 font-medium text-xl">My Notes</h2>
           </div>
-          <div id="list-container" className="h-[80%] flex items-center gap-6 overflow-x-auto">
+          <div className="h-[80%] flex items-center gap-6 overflow-x-auto">
             {task.map((elem, idx) => {          
               return (
                   <div key={idx} className="bg-white h-[80%] w-68 rounded-md p-4 shadow-lg shrink-0">
